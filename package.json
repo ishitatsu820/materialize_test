@@ -15,7 +15,7 @@
   "homepage": "https://github.com/ishitatsu820/materialize_test#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/app.scss css/style.css",
+    "build-css": "node-sass --include-path scss sass/materialize.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "dependencies": {
