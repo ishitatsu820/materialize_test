@@ -1,0 +1,52 @@
+@media screen and (max-width : 768px) {
+  .only-lg {
+    display: none;
+  }
+}
+
+.jumbotron {
+  height: calc(69.444vw + -233.3333px);
+  background-position: center center;
+  background-size: cover;
+  &__inner {
+    position: relative;
+    max-width: 1230px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__title{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 40px;
+    background-color: rgba($color: #000000, $alpha: .7);
+    color: #ffffff;
+    font-size: calc(3.704vw - 8.444px);
+    transform: translateY(-50%);
+
+  }
+}
+
+@media screen and (min-width : 1200px){
+  .jumbotron {
+    height: 600px;
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width : 768px){
+  .jumbotron {
+    height: 300px;
+    &__title {
+      left: 50%;
+      width: 90%;
+      padding: 15px;
+      font-size: 1.25rem;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
