@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <title>ISHITATSU Profile Site</title>
+  <title>石川飛鳥のProfile Site</title>
 </head>
 
 <body>
 
 
-  <!-- ヘッダー -->
-
   <nav>
     <div class="nav-wrapper blue-grey">
       <div class="row">
         <div class="col s12">
-          <a href="#" class="brand-logo">ISHITATSU</a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+            <i class="fas fa-bars"></i>
+          </a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
@@ -31,10 +31,31 @@
   </nav>
 
 
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="images/user-bg.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="images/isikawa_asuka.JPG"></a>
+        <a href=""><span class="blue-grey-text text-darken-4 name">
+            <h5>石川　飛鳥</h5>
+          </span></a>
+        <a href=""><span class="blue-grey-text text-darken-4 email">
+            <h6>exsample@gmail.com</h6>
+          </span></a>
+      </div>
+    </li>
+    <li><a href="#" class="waves-effect"><i class="fas fa-home fa-2x"></i>Home</a></li>
+    <li><a href="#" class="waves-effect"><i class="fas fa-code fa-2x"></i>Projects</a></li>
 
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="sidenav-close center-align" href="#!">閉じる</a></li>
+  </ul>
 
-  <!-- ヒーローバナーセクション -->
-  <div class="jumbotron" style="background-image: url('/materialize_test/images/hero.jpg');">
+  <div class="jumbotron" style="background-image: url('images/hero.jpg');">
     <div class="jumbotron__inner">
       <p class="jumbotron__title">
         Technology will always win.
@@ -45,8 +66,6 @@
 
   <!-- プロフィールセクション -->
   <section id="profile" class="container-fluid c-section c-section_baseR">
-
-
     <div class="c-section-top">
       <h2 class="c-section-top-title">Profile</h2>
     </div>
@@ -226,7 +245,14 @@
 
   <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+  <!-- Initialize sidenav -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, {});
+    });
+  </script>
 </body>
 
 </html>
