@@ -6541,7 +6541,7 @@ input[type=range]::-ms-thumb {
     margin-left: auto; }
   .jumbotron__title {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 0;
     padding: 40px;
     font-size: calc(3.704vw - 8.444px);
